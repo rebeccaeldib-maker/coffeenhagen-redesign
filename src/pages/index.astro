@@ -81,21 +81,37 @@ import MainLayout from "../layouts/MainLayout.astro";
     </section>
   </article>
   <section>
-	  <!-- H2 sektion, left-aligned i den centrerede container -->
-        <div class="w-full max-w-[1200px] px-6 mt-50 ml-30 flex justify-start pointer-events-none">
-          <h2 class="[font-family:'Manrope',sans-serif] text-5xl font-normal text-[#372115] leading-[0.95]">
-            Kaffe når det er bedst
-          </h2>
-        </div>
-		
-      <!-- Paragraph directly under H2 -->
-      <p class="[font-family:'Manrope',sans-serif] text-[18px] text-[#372115] px-6 mt-20 ml-30 max-w-prose">
+
+<section class="py-12">
+	 
+  <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-start gap-8">
+    <!-- Left: text column -->
+	 <div
+          class="text-left intersect:animate-fade-right intersect:duration-9000"
+        >
+    <div class="flex-1 [font-family:'Manrope',sans-serif] text-[#372115]">
+		<h2 class="text-[40px] md:text-[53px] font-normal leading-tight mt-20 mb-15">
+        Kaffe når det er bedst
+      </h2>
+
+      <p class="text-[15px] leading-[1.8] mb-6 max-w-prose">
         Coffeenhagen er en hyggelig og hjemlig café midt i Valby, beliggende ved den travle Toftegårds Allé, mellem Toftegårds Plads og Valby Langgade. Ideen er, at DU skal føle dig velkommen og godt modtaget, mens vi skaber rammerne for dit kaffe setup.
+      </p>
 
-        Coffeenhagen er 100% dansk, og hele vores indretning bærer derfor også præg af dette. Indretningen er “hyggelig” og varm. – Vi har håndplukket nogle gamle zinkplader fra et maskinværksted i Nordjylland. Vi har valgt de mørke og bløde farver på væggene for at skabe en hyggelig “hulestemning”. Vi synes, det passer godt til indretningen og duften af friskbrygget kaffe.
+      <p class="text-[15px] leading-[1.8] mb-6 max-w-prose">
+        Coffeenhagen er 100% dansk, og hele vores indretning bærer derfor også præg af dette. Indretningen er “hyggelig” og varm. Vi har håndplukket nogle gamle zinkplader fra et maskinværksted i Nordjylland. Vi har valgt de mørke og bløde farver på væggene for at skabe en hyggelig “hulestemning”.
+      </p>
 
+      <p class="text-[15px] leading-[1.8] max-w-prose">
         Træplanker, lister og brædder er primært genbrugstræ hos Coffeenhagen, da vi gerne vil være bæredygtige, hvor det giver mening.
       </p>
-      </div>
+    </div>
+
+    <!-- Right: image column -->
+		<div class="w-full md:w-1/2 flex justify-center md:justify-end">
+      <img src="/kaffekop.png" alt="Coffeenhagen - kaffe" class="w-full max-w-[180px] md:max-w-[500px] h-auto object-cover shadow-md"/>
+	  
+    </div>
+  </div>
   </section>
 </MainLayout>
