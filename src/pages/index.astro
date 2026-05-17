@@ -1,197 +1,195 @@
---- 
+---
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Coffeenhagen">
+  
   <article>
-    <section class="relative w-full min-h-screen overflow-hidden">
+    <!-- HERO -->
+    <section class="relative min-h-screen overflow-hidden">
       <img
         src="/hero.png"
         alt="Hero billede"
-        class="absolute inset-0 w-full h-full object-cover block"
+        class="absolute inset-0 h-full w-full object-cover"
       />
-       <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 transform -translate-y-12 md:-translate-y-20 lg:-translate-y-28 pointer-events-none">
-        <h1 class="m-0 mt-30 text-4xl md:text-8xl lg:text8-xl text-[#372115] [font-family:'Manrope',sans-serif] font-extrabold">
+
+      <div class="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
+        <h1
+          class="font-extrabold text-[#372115] text-4xl sm:text-5xl md:text-7xl lg:text-8xl [font-family:'Manrope',sans-serif]"
+        >
           COFFEENHAGEN
         </h1>
-        <h2 class="[font-family:'Manrope',sans-serif] text-4xl mt-11 font-normal text-[#372115] leading-[0.95]">
+
+        <h2
+          class="mt-6 text-[#372115] text-2xl sm:text-3xl md:text-4xl [font-family:'Manrope',sans-serif]"
+        >
           Kaffe, cheesecake & brunch
         </h2>
-		<h3 class="[font-family:'Manrope',sans-serif] text-xl mt-4 font-normal text-[#372115] leading-[0.95]">
-          Studér eller arbejd i hyggelige omgivelser
-		</h3>
 
-		 <!-- two columns immediately under h3, centered on screen -->
-        <div class="mt-17 w-full pl-60 max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 px-6 mx-auto pointer-events-auto">
-          <div class="[font-family:'Manrope',sans-serif] text-[#372115] font-extrabold text-base md:text-2xl">
-            <p class="m-0">
+        <h3
+          class="mt-4 text-[#372115] text-base sm:text-lg md:text-xl [font-family:'Manrope',sans-serif]"
+        >
+          Studér eller arbejd i hyggelige omgivelser
+        </h3>
+
+        <!-- OPENING HOURS -->
+        <div
+          class="mt-10 grid w-full max-w-[600px] grid-cols-2 gap-6 text-center"
+        >
+          <div>
+            <p
+              class="font-extrabold text-[#372115] text-lg md:text-2xl [font-family:'Manrope',sans-serif]"
+            >
               Mandag-lørdag
             </p>
-          </div>
 
-          <div class="[font-family:'Manrope',sans-serif] text-[#372115] font-extrabold text-base md:text-2xl">
-            <p class="m-0">
-              Søndag
-            </p>
-          </div>
-        </div>
-		<!-- second two columns directly underneath the first two columns med åbningstider -->
-        <div class="mt-1 w-full pl-60 max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 px-6 font-extrabold mx-auto pointer-events-auto">
-			<!-- åbningstider under mandag-lørdag -->
-          <div class="[font-family:'Manrope',sans-serif] text-[#372115] pl-18 text-base md:text-2xl">
-            <p class="m-0">
+            <p
+              class="mt-2 text-[#372115] text-base md:text-xl [font-family:'Manrope',sans-serif]"
+            >
               9-18
             </p>
           </div>
 
-		  	<!-- åbningstider under søndag-->
-          <div class="[font-family:'Manrope',sans-serif] text-[#372115] pl-4 text-base md:text-2xl">
-            <p class="m-0">
+          <div>
+            <p
+              class="font-extrabold text-[#372115] text-lg md:text-2xl [font-family:'Manrope',sans-serif]"
+            >
+              Søndag
+            </p>
+
+            <p
+              class="mt-2 text-[#372115] text-base md:text-xl [font-family:'Manrope',sans-serif]"
+            >
               10-18
             </p>
           </div>
-      </div>
-	<!-- To brune cta knapper på hero -->
-        <div class="mt-6 w-full pl-60 max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-2 px-6 mx-auto pointer-events-auto">
-
-          <div class="flex justify-center">
-             <a
-           href="/formular-book"
-              role="button"
-              aria-label="formular-book"
-              class="w-[130px] h-[55px] mr-42 rounded-[10px] bg-[#372115] text-[#F5F2E9] flex items-center justify-center
-                     px-[10px] py-[10px] font-bold transition-opacity duration-150 hover:opacity-75
-                     [box-shadow:3px_3px_5px_rgba(55,33,21,0.5),_inset_0px_4px_10px_rgba(0,0,0,0.25)]
-                     [font-family:'Manrope',sans-serif]"
-            >
-              Book bord
-            </a>
-          </div>
-
-          <div class="flex justify-center md:-ml-2">
-            <a
-           href="/menu"
-              role="button"
-              aria-label="menu"
-              class="w-[130px] h-[55px] mr-60 rounded-[10px] bg-[#372115] text-[#F5F2E9] flex items-center justify-center
-                     px-[10px] py-[10px] font-bold transition-opacity duration-150 hover:opacity-75
-                     [box-shadow:3px_3px_5px_rgba(55,33,21,0.5),_inset_0px_4px_10px_rgba(0,0,0,0.25)]
-                     [font-family:'Manrope',sans-serif]"
-            >
-              Menu & priser
-            </a>
-          </div>
         </div>
 
+        <!-- CTA BUTTONS -->
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="/formular-book"
+            class="flex h-[55px] w-[170px] items-center justify-center rounded-[10px] bg-[#372115] px-6 font-bold text-[#F5F2E9] transition-opacity duration-200 hover:opacity-75 [box-shadow:3px_3px_5px_rgba(55,33,21,0.5),_inset_0px_4px_10px_rgba(0,0,0,0.25)] [font-family:'Manrope',sans-serif]"
+          >
+            Book bord
+          </a>
 
+          <a
+            href="/menu"
+            class="flex h-[55px] w-[170px] items-center justify-center rounded-[10px] bg-[#372115] px-6 font-bold text-[#F5F2E9] transition-opacity duration-200 hover:opacity-75 [box-shadow:3px_3px_5px_rgba(55,33,21,0.5),_inset_0px_4px_10px_rgba(0,0,0,0.25)] [font-family:'Manrope',sans-serif]"
+          >
+            Menu & priser
+          </a>
+        </div>
       </div>
     </section>
-  </article>
-  <section>
 
-    <!-- her starter h2 og p animation -->
-     <div
+    <!-- SECTION 1 med animate fade af tekst og billede-->
+    <section class="py-20">
+        <div
           class="text-left intersect:animate-fade-right intersect:duration-9000"
         >
-<section class="py-12">
-	 
-  <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-start gap-8">
-   
-    <!-- Left: text column -->
-    <div class="flex-1 [font-family:'Manrope',sans-serif] text-[#372115]">
-		<h2 class="text-[40px] md:text-[53px] font-normal leading-tight mt-20 mb-15">
-        Kaffe når det er bedst
-      </h2>
-
-      <p class="text-base leading-[1.8] mb-6 max-w-prose">
-        Coffeenhagen er en hyggelig og hjemlig café midt i Valby, beliggende ved den travle Toftegårds Allé, mellem Toftegårds Plads og Valby Langgade. Ideen er, at DU skal føle dig velkommen og godt modtaget, mens vi skaber rammerne for dit kaffe setup.
-      </p>
-
-      <p class="text-base leading-[1.8] mb-6 max-w-prose">
-        Coffeenhagen er 100% dansk, og hele vores indretning bærer derfor også præg af dette. Indretningen er “hyggelig” og varm. Vi har håndplukket nogle gamle zinkplader fra et maskinværksted i Nordjylland. Vi har valgt de mørke og bløde farver på væggene for at skabe en hyggelig “hulestemning”.
-      </p>
-
-      <p class="text-base leading-[1.8] max-w-prose">
-        Træplanker, lister og brædder er primært genbrugstræ hos Coffeenhagen, da vi gerne vil være bæredygtige, hvor det giver mening.
-      </p>
-    </div>
-<!-- Her starter billede animationen, og sourcen af selve billedet-->
-    <div
-          class="flex justify-center intersect:animate-fade-left intersect:duration-9000 md:justify-end"
-        >
-          <img
-            src="kaffekop.png"
-            alt="billede-af-kaffe-kop"
-            class="w-full max-w-[480px] h-auto object-cover rounded-sm shadow-lg"
-          />
-	  
-    </div>
-  </div>
-
- <!-- Ny sektion: image til venstre, tekst til højre -->
-  <section class="py-12">
-    <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
-      <!-- Image: left on md+, full-width on small -->
-       <div
-          class="flex justify-center intersect:animate-fade-right intersect:duration-9000 md:justify-end"
-        >
-        <div class="w-full mt-20 md:w-1/2 flex justify-start">
+      <div
+        class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 md:flex-row"
+      >
+        <!-- TEXT -->
+        <div class="flex-1 text-[#372115] [font-family:'Manrope',sans-serif]">
       
-        <img
-          src="/berrycheese.png"
-          alt="berrycheese - Coffeenhagen"
-          class="w-full max-w-[480px] h-auto object-cover rounded-sm shadow-lg"
-          
-        />
-      </div>
+          <h2 class="text-3xl font-normal leading-tight md:text-5xl">
+            Kaffe når det er bedst
+          </h2>
 
-      <!-- Text: right on md+, stacked below image on small -->
-        
-      <div class="w-full md:w-1/2 [font-family:'Manrope',sans-serif] text-[#372115]">
+          <p class="mt-8 max-w-prose text-base leading-[1.8]">
+
+            Coffeenhagen er en hyggelig og hjemlig café midt i Valby, beliggende ved den travle Toftegårds Allé, mellem Toftegårds Plads og Valby Langgade. Ideen er, at DU skal føle dig velkommen og godt modtaget, mens vi skaber rammerne for dit kaffe setup.
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+            Coffeenhagen er 100% dansk, og hele vores indretning bærer derfor også præg af dette. Indretningen er “hyggelig” og varm. – Vi har håndplukket nogle gamle zinkplader fra et maskinværksted i Nordjylland. Vi har valgt de mørke og bløde farver på væggene for at skabe en hyggelig “hulestemning”. Vi synes, det passer godt til indretningen og duften af friskbrygget kaffe. 
+
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+            Træplanker, lister og brædder er primært genbrugstræ hos Coffeenhagen, da vi gerne vil være bæredygtige, hvor det giver mening.
+          </p>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="flex flex-1 justify-center">
+          <img
+            src="/kaffekop.png"
+            alt="Kaffekop"
+            class="w-full max-w-[500px] rounded-sm shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 med animation fade af tekst og billede-->
+    <section class="py-20">
          <div
           class="text-left intersect:animate-fade-left intersect:duration-9000"
         >
-        <h2 class="text-[32px] mt-40 md:text-[44px] font-normal leading-tight mb-4">
-          Vi har lidt af hvert
-        </h2>
+      <div
+        class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 md:flex-row"
+      >
+        <!-- IMAGE -->
+        <div class="flex flex-1 justify-center">
+          <img
+            src="/berrycheese.png"
+            alt="Berry cheesecake"
+            class="w-full max-w-[500px] rounded-sm shadow-lg"
+          />
+        </div>
 
-        <p class="text-base leading-[1.8] mb-4 mt-15 max-w-prose">
-          Start din dag med vores indbydende Morgentallerken, som indeholder en friskbagt bolle med smør og ‘Gammel Knas’ ost, marmelade og et perfekt tilberedt æg. For en lettere og sødere start tilbyder vi Græsk yoghurt toppet med sprød granola, friske bær, sirup og chokoladestykker – en perfekt kombination af sundhed og forkælelse.
-        </p>
+        <!-- TEXT -->
+        <div class="flex-1 text-[#372115] [font-family:'Manrope',sans-serif]">
+        
+          <h2 class="text-3xl font-normal leading-tight md:text-5xl">
+            Vi har lidt af hvert
+          </h2>
 
-        <p class="text-base leading-[1.8] mt-7 max-w-prose">
-        Forkæl din søde tand med vores udsøgte cheesecakes, der kommer i spændende smagsvarianter som Red Velvet, Key Lime, Oreo og Caramel Pecan. Hver bid er en luksuriøs smagsoplevelse, der får dig til at komme igen. Nyd en varm drik til at fuldende din oplevelse. Vælg mellem klassikere som espresso, cortado, flat white og cappuccino, eller prøv vores chai latte, dirty chai, matcha eller fyldige varm chokolade. Der er noget for enhver smag!
-        </p>
+          <p class="mt-8 max-w-prose text-base leading-[1.8]">
+            Start din dag med vores indbydende Morgentallerken, som indeholder en friskbagt bolle med smør og ‘Gammel Knas’ ost, marmelade og et perfekt tilberedt æg. For en lettere og sødere start tilbyder vi Græsk yoghurt toppet med sprød granola, friske bær, sirup og chokoladestykker – en perfekt kombination af sundhed og forkælelse.
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+           Forkæl din søde tand med vores udsøgte cheesecakes, der kommer i spændende smagsvarianter som Red Velvet, Key Lime, Oreo og Caramel Pecan. Hver bid er en luksuriøs smagsoplevelse, der får dig til at komme igen. Nyd en varm drik til at fuldende din oplevelse. Vælg mellem klassikere som espresso, cortado, flat white og cappuccino, eller prøv vores chai latte, dirty chai, matcha eller fyldige varm chokolade. Der er noget for enhver smag!
+          </p>
+        </div>
       </div>
-    </div>
- </section>
-    <!-- Centered "se menu" link with underline -->
-  <div class="w-full flex justify-center mt-8 mb-12">
-    <a
-      href="/menu"
-      class="[font-family:'Manrope',sans-serif] text-[#372115] text-lg mt-20 underline underline-offset-4 font-bold hover:opacity-80"
-    >
-      Se menu
-    </a>
-    </div>
-    <!-- Gallery: 10 photos, 5 per row on md+ -->
-     <div
+
+      <!-- SE MENU LINK -->
+      <div class="mt-16 flex justify-center">
+        <a
+          href="/menu"
+          class="text-lg font-bold text-[#372115] underline underline-offset-4 transition-opacity hover:opacity-80 [font-family:'Manrope',sans-serif]"
+        >
+          Se menu
+        </a>
+      </div>
+    </section>
+
+    <!-- GALLERI -->
+    <section class="pb-20">
+       <div
           class="text-left intersect:animate-fade-up intersect:duration-9000"
         >
-   <div class="w-full max-w-[1200px] px-6 mt-10 ml-31 grid grid-cols-2 md:grid-cols-5 gap-4">
-    <img src="/billede1.png" alt="billede 1" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-   <img src="/billede2.png" alt="billede 2" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-    <img src="/billede3.png" alt="billede 3" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-   <img src="/billede4.png" alt="billede 4" class="w-full h-36 md:h-60 object-cover  rounded-sm shadow-md" />
-    <img src="/billede5.png" alt="billede 5" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-   <img src="/billede6.png" alt="billede 6" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-  <img src="/billede7.png" alt="billede 7" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-
-   <img src="/billede8.png" alt="billede 8" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-
-   <img src="/billede9.png" alt="billede 9" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
-  <img src="/billede10.png" alt="billede 10" class="w-full h-36 md:h-60 object-cover rounded-sm shadow-md" />
- </div>
-   
-  </div>
+      <div
+        class="mx-auto grid max-w-[1200px] grid-cols-2 gap-4 px-6 md:grid-cols-5"
+      >
+        <img src="/billede1.png" alt="billede 1" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede2.png" alt="billede 2" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede3.png" alt="billede 3" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede4.png" alt="billede 4" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede5.png" alt="billede 5" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede6.png" alt="billede 6" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede7.png" alt="billede 7" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede8.png" alt="billede 8" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede9.png" alt="billede 9" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+        <img src="/billede10.png" alt="billede 10" class="h-40 w-full rounded-sm object-cover shadow-md md:h-60" />
+      </div>
+    </section>
+  </article>
 </MainLayout>
+```
