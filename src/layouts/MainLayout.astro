@@ -12,8 +12,11 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
 		<script defer src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"></script>
+		<!-- Manrope (optional) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
 	</head>
-	<body>
+	<body class="min-h-screen bg-[#F5F2E9] font-sans">
 
 		<header>
 			<Header></Header>

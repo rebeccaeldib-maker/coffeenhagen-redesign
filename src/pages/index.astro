@@ -1,15 +1,101 @@
----
+--- 
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+
+<MainLayout title="Coffeenhagen">
+  <article>
+    <section class="relative w-full min-h-screen overflow-hidden">
+      <img
+        src="/hero.png"
+        alt="Hero billede"
+        class="absolute inset-0 w-full h-full object-cover block"
+      />
+       <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 transform -translate-y-12 md:-translate-y-20 lg:-translate-y-28 pointer-events-none">
+        <h1 class="m-0 mt-30 text-4xl md:text-8xl lg:text8-xl text-[#372115] [font-family:'Manrope',sans-serif] font-extrabold">
+          COFFEENHAGEN
+        </h1>
+        <h2 class="[font-family:'Manrope',sans-serif] text-4xl mt-11 font-normal text-[#372115] leading-[0.95]">
+          Kaffe, cheesecake & brunch
+        </h2>
+		<h3 class="[font-family:'Manrope',sans-serif] text-xl mt-4 font-normal text-[#372115] leading-[0.95]">
+          Studér eller arbejd i hyggelige omgivelser
+		</h3>
+
+		 <!-- two columns immediately under h3, centered on screen -->
+        <div class="mt-17 w-full pl-60 max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 px-6 mx-auto pointer-events-auto">
+          <div class="[font-family:'Manrope',sans-serif] text-[#372115] font-extrabold text-base md:text-2xl">
+            <p class="m-0">
+              Mandag-lørdag
+            </p>
+          </div>
+
+          <div class="[font-family:'Manrope',sans-serif] text-[#372115] font-extrabold text-base md:text-2xl">
+            <p class="m-0">
+              Søndag
+            </p>
+          </div>
+        </div>
+		<!-- second two columns directly underneath the first two columns med åbningstider -->
+        <div class="mt-1 w-full pl-60 max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-6 px-6 font-extrabold mx-auto pointer-events-auto">
+			<!-- åbningstider under mandag-lørdag -->
+          <div class="[font-family:'Manrope',sans-serif] text-[#372115] pl-18 text-base md:text-2xl">
+            <p class="m-0">
+              9-18
+            </p>
+          </div>
+
+		  	<!-- åbningstider under søndag-->
+          <div class="[font-family:'Manrope',sans-serif] text-[#372115] pl-4 text-base md:text-2xl">
+            <p class="m-0">
+              10-18
+            </p>
+          </div>
+      </div>
+	<!-- two buttons centered directly underneath the hours (second button moved slightly toward center) -->
+        <div class="mt-6 w-full pl-60 max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-2 px-6 mx-auto pointer-events-auto">
+          <div class="flex justify-center">
+            <button
+              class="w-[130px] h-[55px] mr-42 rounded-[10px] bg-[#372115] text-white flex items-center justify-center
+                     px-[10px] py-[10px] font-bold transition-opacity duration-150 hover:opacity-75
+                     [box-shadow:3px_3px_5px_rgba(55,33,21,0.5),_inset_0px_4px_10px_rgba(0,0,0,0.25)]
+                     [font-family:'Manrope',sans-serif]"
+            >
+              Book bord
+            </button>
+          </div>
+
+          <div class="flex justify-center md:-ml-2">
+            <button
+              class="w-[200px] h-[55px] mr-60 rounded-[10px] bg-[#372115] text-white flex items-center justify-center
+                     px-[10px] py-[10px] font-bold transition-opacity duration-150 hover:opacity-75
+                     [box-shadow:3px_3px_5px_rgba(55,33,21,0.5),_inset_0px_4px_10px_rgba(0,0,0,0.25)]
+                     [font-family:'Manrope',sans-serif]"
+            >
+              Menu & priser
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </article>
+  <section>
+	  <!-- H2 sektion, left-aligned i den centrerede container -->
+        <div class="w-full max-w-[1200px] px-6 mt-50 ml-30 flex justify-start pointer-events-none">
+          <h2 class="[font-family:'Manrope',sans-serif] text-5xl font-normal text-[#372115] leading-[0.95]">
+            Kaffe når det er bedst
+          </h2>
+        </div>
+		
+      <!-- Paragraph directly under H2 -->
+      <p class="[font-family:'Manrope',sans-serif] text-[18px] text-[#372115] px-6 mt-20 ml-30 max-w-prose">
+        Coffeenhagen er en hyggelig og hjemlig café midt i Valby, beliggende ved den travle Toftegårds Allé, mellem Toftegårds Plads og Valby Langgade. Ideen er, at DU skal føle dig velkommen og godt modtaget, mens vi skaber rammerne for dit kaffe setup.
+
+        Coffeenhagen er 100% dansk, og hele vores indretning bærer derfor også præg af dette. Indretningen er “hyggelig” og varm. – Vi har håndplukket nogle gamle zinkplader fra et maskinværksted i Nordjylland. Vi har valgt de mørke og bløde farver på væggene for at skabe en hyggelig “hulestemning”. Vi synes, det passer godt til indretningen og duften af friskbrygget kaffe.
+
+        Træplanker, lister og brædder er primært genbrugstræ hos Coffeenhagen, da vi gerne vil være bæredygtige, hvor det giver mening.
+      </p>
+      </div>
+  </section>
 </MainLayout>
