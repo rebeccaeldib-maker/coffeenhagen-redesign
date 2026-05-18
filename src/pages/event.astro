@@ -1,0 +1,53 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="event">  
+
+ <!-- SECTION 1 med animate fade af tekst og billede-->
+<section class="py-20">
+  <div class="text-left intersect:animate-fade-right intersect:duration-9000">
+
+    <div class="mx-auto flex max-w-[1200px] flex-col items-start gap-12 px-6 md:flex-row">
+
+      <!-- TEXT -->
+      <div class="flex-1 text-[#372115] [font-family:'Manrope',sans-serif]">
+
+        <h2 class="text-3xl mt-20 font-normal leading-tight md:text-5xl">
+          Hold dit event hos os!
+        </h2>
+
+        <p class="mt-20 max-w-prose text-base leading-[1.8]">
+          Kunne du tænke dig at holde din fødselsdag, barnedåb eller andet i vores lækre lokaler? Så er du kommet til det rette sted!
+        </p>
+
+        <p class="mt-6 max-w-prose text-base leading-[1.8]">
+          Hele caféen står til rådighed ved afholdelse af dit event, kun til dig og dine gæster.
+        </p>
+
+        <p class="mt-6 max-w-prose text-base leading-[1.8]">
+          Lyder det som noget for dig? Så kom forbi caféen, så vi kan få os en snak, eller skriv eller ring til os på
+        </p>
+
+        <p class="mt-6 max-w-prose font-bold leading-[1.8]">
+          +45 51 88 58 25
+        </p>
+
+        <p class="mt-2 max-w-prose font-bold leading-[1.8]">
+          info@coffeenhagen.dk
+        </p>
+
+      </div>
+
+      <!-- billede af event -->
+      <div class="flex flex-1 justify-center">
+        <img
+          src="/event.png"
+          alt="event"
+          class="w-full max-w-[500px] mb-20 rounded-sm shadow-lg"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

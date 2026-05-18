@@ -1,0 +1,90 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="kontakt">
+    
+    <section class="py-20 px-6">
+        
+  <div class="max-w-[700px] mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-5xl text-[#372115] mb-20  [font-family:'Manrope',sans-serif]">
+      Kontakt os
+    </h2>
+
+    <!-- Paragraph -->
+    <p class="mt-4 text-[#372115]/80 leading-[1.8] [font-family:'Manrope',sans-serif]">
+      Vil du arrangere et event, i vores hyggelige lokaler? Eller har du noget på hjerte du gerne vil dele? Så skriv til os her eller send os en mail direkte på info@coffeenhagen.dk, så vender vi straks tilbage!
+
+    </p>
+
+    <!-- Form -->
+    <form class="mt-10 flex flex-col gap-5">
+
+      <!-- Navn -->
+      <input
+        type="text"
+        placeholder="Navn"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none transition-all focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- Email -->
+      <input
+        type="email"
+        placeholder="Email"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none transition-all focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- Emne -->
+      <input
+        type="text"
+        placeholder="Emne"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none transition-all focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- Besked -->
+      <textarea
+        rows="6"
+        placeholder="Besked"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none transition-all focus:border-[#372115]
+               resize-none [font-family:'Manrope',sans-serif]"
+      ></textarea>
+
+      <!-- Button -->
+      <button
+        type="submit"
+        class="mt-2 h-[55px] rounded-xl bg-[#372115] text-[#F5F2E9]
+               font-bold transition-opacity duration-200 hover:opacity-80
+               [font-family:'Manrope',sans-serif]"
+      >
+        Send
+      </button>
+
+    </form>
+    <!-- Kontakt info nederst -->
+<div class="mt-8 border-t border-[#e5dfd5] pt-6 text-[#372115] [font-family:'Manrope',sans-serif]">
+  
+  <p class="text-sm md:text-base">
+    📧  <a href="mailto:info@coffeenhagen.dk" class="font-semibold hover:underline">
+      info@coffeenhagen.dk
+    </a>
+  </p>
+
+  <p class="mt-2 text-sm md:text-base">
+    📞  <a href="tel:+4512345678" class="font-semibold hover:underline">
+      +45 51 88 58 25
+    </a>
+  </p>
+
+</div>
+  </div>
+</section>
+</MainLayout>

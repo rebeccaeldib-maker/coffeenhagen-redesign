@@ -1,3 +1,113 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 ---
+
+
+<MainLayout title="Book bord">
+
+<section class="py-20 px-6">
+  <div class="max-w-[700px] mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-5xl text-[#372115] mb-10 [font-family:'Manrope',sans-serif]">
+      Book bord herunder
+    </h2>
+
+    <!-- Paragraph -->
+    <p class="text-[#372115]/80 leading-[1.8] [font-family:'Manrope',sans-serif]">
+      Book et bord hos Coffeenhagen. Vælg dato, tidspunkt og antal personer, så sørger vi for en hyggelig oplevelse klar til dig.
+    </p>
+
+    <!-- FORM -->
+    <form class="mt-10 flex flex-col gap-5">
+
+      <!-- Navn -->
+      <input
+        type="text"
+        placeholder="Navn"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- Email -->
+      <input
+        type="email"
+        placeholder="Email"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- DATO -->
+      <input
+        type="date"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- TID -->
+      <input
+        type="time"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      />
+
+      <!-- ANTAL PERSONER -->
+      <select
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
+               [font-family:'Manrope',sans-serif]"
+      >
+        <option value="">Antal personer</option>
+        <option>1 person</option>
+        <option>2 personer</option>
+        <option>3 personer</option>
+        <option>4 personer</option>
+        <option>5+ personer</option>
+      </select>
+
+      <!-- BESKED -->
+      <textarea
+        rows="5"
+        placeholder="Evt. besked"
+        class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
+               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
+               resize-none [font-family:'Manrope',sans-serif]"
+      ></textarea>
+
+      <!-- BUTTON -->
+      <button
+        type="submit"
+        class="mt-2 h-[55px] rounded-xl bg-[#372115] text-[#F5F2E9]
+               font-bold transition-opacity hover:opacity-80
+               [font-family:'Manrope',sans-serif]"
+      >
+        Bekræft booking
+      </button>
+
+    </form>
+
+    <!-- INFO -->
+    <div class="mt-8 border-t border-[#e5dfd5] pt-6 text-[#372115] [font-family:'Manrope',sans-serif]">
+
+      <p class="text-sm md:text-base">
+        📧 <a href="mailto:info@coffeenhagen.dk" class="font-semibold hover:underline">
+          info@coffeenhagen.dk
+        </a>
+      </p>
+
+      <p class="mt-2 text-sm md:text-base">
+        📞 <a href="tel:+4551885825" class="font-semibold hover:underline">
+          +45 51 88 58 25
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+</MainLayout>

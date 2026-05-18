@@ -1,3 +1,64 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 ---
+
+<MainLayout title="find-os">
+
+<section class="py-20 px-6">
+  <div class="max-w-[1100px] mx-auto flex flex-col gap-12 md:flex-row items-start">
+
+    <!-- LEFT: TEXT -->
+    <div class="flex-1 text-[#372115] [font-family:'Manrope',sans-serif]">
+
+      <h1 class="text-3xl mt-20 mb-20 font-normal leading-tight md:text-5xl">
+        Find os
+      </h1>
+
+      <p class="max-w-prose text-base leading-[1.8]">
+        Du finder Coffeenhagen i hjertet af Valby. Vi ligger tæt på Toftegårds Plads
+        og er nemme at komme til både med bus, tog og til fods.
+      </p>
+
+      <!-- ADDRESS -->
+      <div class="mt-10">
+        <h2 class=" mt-8 max-w-prose text-base leading-[1.8] font-bold">
+          Adresse
+        </h2>
+        <p class="mt-2 text-base">
+          Toftegårds Allé 19, 2500 Valby
+        </p>
+      </div>
+
+      <!-- OPENING HOURS -->
+      <div class="mt-8">
+        <h2 class="mt-8 max-w-prose text-base leading-[1.8] font-bold">
+          Åbningstider
+        </h2>
+
+        <div class="mt-3 space-y-1 text-base">
+          <p>Mandag - Lørdag: 09:00 - 18:00</p>
+          <p>Søndag: 10:00 - 18:00</p>
+        </div>
+    </div>
+    </div>
+
+    <!-- Google Map til højre -->
+    <div class="flex-1 w-full">
+      <div class="w-full h-[400px] md:h-[500px] mb-20 rounded-2xl overflow-hidden shadow-lg border border-[#e7dfd4]">
+
+        <!-- Google Maps -->
+        <iframe
+          class="w-full h-full"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Valby%20Tofteg%C3%A5rds%20All%C3%A9&output=embed">
+        </iframe>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</MainLayout>
