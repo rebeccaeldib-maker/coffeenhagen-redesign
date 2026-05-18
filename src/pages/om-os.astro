@@ -1,0 +1,46 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="om-os">
+ <!-- TEXT -->
+  <!-- SECTION 1 Plads til alle med animate fade af tekst og billede-->
+    <section class="py-20">
+        <div
+          class="text-left intersect:animate-fade-right intersect:duration-9000"
+        >
+      <div
+        class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 md:flex-row"
+      >
+        <!-- TEXT -->
+        <div class="flex-1 text-[#372115] [font-family:'Manrope',sans-serif]">
+      
+          <h2 class="text-3xl font-normal mt-20 leading-tight md:text-5xl">
+            Plads til alle
+          </h2>
+
+          <p class="mt-8 max-w-prose text-base mt-20 leading-[1.8]">
+            Coffeenhagen er en hyggelig og hjemlig café midt i Valby, beliggende ved den travle Toftegårds Allé, mellem Toftegårds Plads og Valby Langgade. Ideen er, at DU skal føle dig velkommen og godt modtaget, mens vi skaber rammerne for dit kaffe setup. Coffeenhagen er 100% dansk, og hele vores indretning bærer derfor også præg af dette. Indretningen er “hyggelig” og varm. 
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+            Vi har håndplukket nogle gamle zinkplader fra et maskinværksted i Nordjylland. Vi har valgt de mørke og bløde farver på væggene for at skabe en hyggelig “hulestemning”. Vi synes, det passer godt til indretningen og duften af friskbrygget kaffe. Træplanker, lister og brædder er primært genbrugstræ hos Coffeenhagen, da vi gerne vil være bæredygtige, hvor det giver mening.  
+          </p>
+
+          <p class="mt-6 max-w-prose text-base mb-20 leading-[1.8]">
+           Vi serverer alt fra friskbrygget kaffe og iskaffe til brunch, cheesecake og andre søde fristelser. Uanset om du kommer forbi for at arbejde med din laptop, læse til studie, mødes med venner eller bare tage en pause fra byen, ønsker vi at skabe rammerne for en behagelig oplevelse.
+           For os handler det ikke kun om kaffe – men om stemningen, nærværet og de små pauser i hverdagen, som gør en forskel. Derfor arbejder vi på at skabe en café, hvor både lokale og besøgende har lyst til at vende tilbage.
+          </p>
+        </div>
+
+        <!-- Billede af croissant og kaffe -->
+        <div class="flex flex-1 justify-center">
+          <img
+            src="/cafeen.png"
+            alt="cafeen"
+            class="w-full max-w-[500px] mb-20 rounded-sm shadow-lg"
+          />
+        </div>
+    </section>
+
+</MainLayout>

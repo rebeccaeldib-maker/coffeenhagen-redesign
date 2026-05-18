@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Menu">
+ <!-- TEXT -->
+  <!-- SECTION 1 Menu med animate fade af tekst og billede-->
+    <section class="py-20">
+        <div
+          class="text-left intersect:animate-fade-right intersect:duration-9000"
+        >
+      <div
+        class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 md:flex-row"
+      >
+        <!-- TEXT -->
+        <div class="flex-1 text-[#372115] [font-family:'Manrope',sans-serif]">
+      
+          <h2 class="text-3xl font-normal mt-20 leading-tight md:text-5xl">
+            Menu
+          </h2>
+
+          <p class="mt-8 max-w-prose font-bold mt-20 leading-[1.8]">Se menu nedenunder</p>
+          <p class="mt-8 max-w-prose text-base leading-[1.8]">
+            Din Oase af Kaffe, Bagværk og Lettere Lækkerier. Hos Coffeenhagen finder du et bredt udvalg af lækkerier, der forkæler både den lille og store sult. Vores menu byder på et udvalg af delikate kager, friskbagt bagværk som croissanter og cookies, samt forskellige varianter af aromatiske varme drikke, herunder espresso, cappuccino og cafe latte. For dem, der ønsker noget forfriskende, tilbyder vi også en række forskellige iskaffer.
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+            Til den lette sult kan du vælge mellem vores nøje sammensatte retter, der kombinerer smag og kvalitet. Uanset om du er til det søde, det salte eller en god kop kaffe, har vi noget, der passer til dig.
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+           Kom og nyd vores hyggelige atmosfære i Coffeenhagen beliggende i Valby. 
+          </p>
+
+          <p class="mt-6 max-w-prose text-base leading-[1.8]">
+            Se vores menukort neden under. Vi har et bredt udvalg, så der er noget til enhver smag.  
+          </p>
+        </div>
+
+        <!-- Billede af croissant og kaffe -->
+        <div class="flex flex-1 justify-center">
+          <img
+            src="/croissant.png"
+            alt="croissant"
+            class="w-full max-w-[500px] rounded-sm shadow-lg"
+          />
+        </div>
+      </div>
+      <div class="flex flex-1 justify-center">
+          <img
+            src="/menu.png"
+            alt="menu"
+            class="w-full max-w-[500px] mt-40 mb-20 shadow-lg"
+          />
+        </div>
+    </section>
+
+</MainLayout>
