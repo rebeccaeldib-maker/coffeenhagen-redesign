@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-
 <MainLayout title="Book bord">
 
 <section class="py-20 px-6">
@@ -13,54 +12,33 @@ import MainLayout from "../layouts/MainLayout.astro";
       Book bord herunder
     </h2>
 
-    <!-- Paragraph -->
+    <!-- Text -->
     <p class="text-[#372115]/80 leading-[1.8] [font-family:'Manrope',sans-serif]">
-      Book et bord hos Coffeenhagen. Vælg dato, tidspunkt og antal personer, så sørger vi for en hyggelig oplevelse klar til dig.
+      Book et bord hos Coffeenhagen. Vælg dato, tidspunkt og antal personer, så sørger vi for en hyggelig oplevelse.
     </p>
 
     <!-- FORM -->
-    <form class="mt-10 flex flex-col gap-5">
+    <form id="bookingForm" class="mt-10 flex flex-col gap-5">
 
-      <!-- Navn -->
-      <input
-        type="text"
-        placeholder="Navn"
+      <input type="text" placeholder="Navn" required
         class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
-               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
-               [font-family:'Manrope',sans-serif]"
-      />
+        outline-none focus:ring-0 [font-family:'Manrope',sans-serif]" />
 
-      <!-- Email -->
-      <input
-        type="email"
-        placeholder="Email"
+      <input type="email" placeholder="Email" required
         class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
-               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
-               [font-family:'Manrope',sans-serif]"
-      />
+        outline-none focus:ring-0 [font-family:'Manrope',sans-serif]" />
 
-      <!-- DATO -->
-      <input
-        type="date"
+      <input type="date" required
         class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
-               outline-none focus:outline-none focus:ring-0 focus:border-[#372115] accent-gray-500 appearance-none
-               [font-family:'Manrope',sans-serif]"
-      />
+        outline-none focus:ring-0 [font-family:'Manrope',sans-serif]" />
 
-      <!-- TID -->
-      <input
-        type="time"
+      <input type="time" required
         class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
-               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
-               [font-family:'Manrope',sans-serif]"
-      />
+        outline-none focus:ring-0 [font-family:'Manrope',sans-serif]" />
 
-      <!-- ANTAL PERSONER -->
-      <select
+      <select required
         class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
-               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
-               [font-family:'Manrope',sans-serif]"
-      >
+        outline-none focus:ring-0 [font-family:'Manrope',sans-serif]">
         <option value="">Antal personer</option>
         <option>1 person</option>
         <option>2 personer</option>
@@ -69,21 +47,15 @@ import MainLayout from "../layouts/MainLayout.astro";
         <option>5+ personer</option>
       </select>
 
-      <!-- BESKED -->
-      <textarea
-        rows="5"
-        placeholder="Evt. besked"
+      <textarea rows="5" placeholder="Evt. besked"
         class="w-full rounded-xl border border-[#372115] bg-[#F5F2E9] px-5 py-4 text-[#372115]
-               outline-none focus:outline-none focus:ring-0 focus:border-[#372115]
-               resize-none [font-family:'Manrope',sans-serif]"
-      ></textarea>
+        resize-none outline-none focus:ring-0 [font-family:'Manrope',sans-serif]"></textarea>
 
       <!-- BUTTON -->
       <button
         type="submit"
         class="mt-2 h-[55px] rounded-xl bg-[#372115] text-[#F5F2E9]
-               font-bold transition-opacity hover:opacity-80
-               [font-family:'Manrope',sans-serif]"
+        font-bold hover:opacity-80 transition"
       >
         Bekræft booking
       </button>
@@ -91,23 +63,91 @@ import MainLayout from "../layouts/MainLayout.astro";
     </form>
 
     <!-- INFO -->
-    <div class="mt-8 border-t border-[#e5dfd5] pt-6 text-[#372115] [font-family:'Manrope',sans-serif]">
-
-      <p class="text-sm md:text-base">
-        📧 <a href="mailto:info@coffeenhagen.dk" class="font-semibold hover:underline">
-          info@coffeenhagen.dk
-        </a>
-      </p>
-
-      <p class="mt-2 text-sm md:text-base">
-        📞 <a href="tel:+4551885825" class="font-semibold hover:underline">
-          +45 51 88 58 25
-        </a>
-      </p>
-
+    <div class="mt-8 border-t border-[#e5dfd5] pt-6 text-[#372115]">
+      <p>📧 <a href="mailto:info@coffeenhagen.dk" class="font-semibold hover:underline">info@coffeenhagen.dk</a></p>
+      <p class="mt-2">📞 <a href="tel:+4551885825" class="font-semibold hover:underline">+45 51 88 58 25</a></p>
     </div>
 
   </div>
 </section>
+
+<!-- POPUP -->
+<div
+  id="bookingPopup"
+  class="fixed inset-0 bg-black/40 flex items-center justify-center
+  opacity-0 pointer-events-none transition-all duration-300 z-50"
+>
+  <div
+    id="popupContent"
+    class="bg-white rounded-2xl p-10 max-w-[400px] w-[90%] text-center shadow-2xl scale-95 transition-transform duration-300"
+  >
+
+    <!-- CHECK -->
+    <div class="flex justify-center mb-5">
+      <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- TITLE -->
+    <h3 class="text-3xl text-[#372115] mb-3 [font-family:'Manrope',sans-serif]">
+      Booking bekræftet
+    </h3>
+
+    <!-- TEXT -->
+    <p class="text-[#372115]/80 leading-[1.6]">
+      Tak for din booking hos Coffeenhagen. 
+    </p>
+    <p class="text-[#372115]/80 leading-[1.6]">
+     Vi glæder os til at se dig.
+    </p>
+     <p class="text-[#372115]/80 leading-[1.6]">
+     Har du spørgsmål vedrørende din booking, er du velkommen til at kontakte os på 
+    </p>
+     <p class="text-[#372115]/80 leading-[1.6]">
+     +45 51 88 58 25.
+    </p>
+
+    <!-- CLOSE -->
+    <button
+      id="closePopup"
+      class="mt-8 bg-[#372115] text-[#F5F2E9] px-6 py-3 rounded-xl hover:opacity-80"
+    >
+      Luk
+    </button>
+
+  </div>
+</div>
+
+<!-- JS (WORKING ASTRO VERSION) -->
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("bookingForm");
+    const popup = document.getElementById("bookingPopup");
+    const popupContent = document.getElementById("popupContent");
+    const closeBtn = document.getElementById("closePopup");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      popup.classList.remove("opacity-0", "pointer-events-none");
+
+      setTimeout(() => {
+        popupContent.classList.remove("scale-95");
+      }, 10);
+
+      form.reset();
+    });
+
+    closeBtn.addEventListener("click", () => {
+      popup.classList.add("opacity-0", "pointer-events-none");
+      popupContent.classList.add("scale-95");
+    });
+
+  });
+</script>
 
 </MainLayout>
